@@ -1,0 +1,997 @@
+<head>
+
+        <link rel="stylesheet" href="style.css">
+        <meta charset="utf-8">
+        <meta name="author" content="Javiera Craig">
+        <title>ASESORIA CONTABLE</title>
+        <meta name="description" content="Asociación para la promoción del uso sostenible de los recursos forestales">
+        <link rel="icon" type="image/png" sizes="32x32" href="imagenes/favicon.png">
+        <html lang="es-ES"></html>
+        <meta name="viewport" content="width=device-width">
+    </head>
+
+<body>
+
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Poppins:400,400i,500,500i,600,700,800,900');
+@import url('https://fonts.googleapis.com/css?family=Cabin:400,400i,500,500i,600,600i,700,700i');
+
+* {
+    box-sizing: border-box;
+   }
+
+
+a {
+    text-decoration: none;
+    color: #333333;
+  }
+
+h1 {
+    font-size: 2rem;
+     }
+
+h2 {
+    font-size: 1.75rem;
+  }
+
+h3 {
+    font-family: "Cabin";
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #333;
+   }
+
+h4 {
+    font-size: 1.25rem;
+  }
+
+h5 {
+    font-size: 1.125rem;
+  }
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Cabin", sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    width: auto;
+    height: auto;
+}
+
+
+header {
+ 
+    background-color: #bbbbbb;
+    background-image: url(imagenes/descarga.png);
+    background-size: cover;
+    background-attachment: fixed;
+    /*filter: brightness(80%);*/
+    padding: 0;
+    width: 100%;
+    min-height: 25vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.header-filter {
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    width: 100%;
+    min-height: inherit;
+    position: absolute;
+    z-index: 0;
+}
+
+header h4 {
+    color: white;
+    font-weight: lighter;
+    font-size: 30px;
+    letter-spacing: 1px;
+    text-align: center;
+    z-index: 1;
+    display: flex;
+    align-self: center;
+}
+
+
+.nav-desktop {
+    background-color: white;
+    padding: 10px;
+    width: 100%;
+    min-height: 48px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+@media screen and (max-width: 850px) {
+    .nav-desktop {
+        display: none;
+    }
+}
+
+.nav-logo {
+    /*5background-color: aqua;*/
+    padding: 0 0 0 25px;
+    width: auto;
+    height: 28px;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s;
+}
+
+.nav-logo:hover {
+    transform: translate(0, 0) scale(1.04);
+    transform-origin: center bottom;
+}
+
+.nav-logo svg:hover {
+    box-shadow: 5px 10px 10px rgba(56, 56, 56, 1);
+}
+
+.nav-separator {
+    margin: 0 15px;
+    background-color: #333333;
+    display: flex;
+    width: 1px;
+    height: 1.5em;
+}
+
+.nav-desktop ul {
+    padding: 0 20px 0 0;
+    /*background-color: aquamarine;*/
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    align-self: right;
+    min-height: inherit;
+    margin: 0 0 0 auto;
+  }
+
+.nav-desktop li {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+  }
+
+.feat-link a {
+    padding: 5px 15px;
+    font-size: 1rem;
+    font-weight: 500;
+    display: flex;
+    border-style: 1px solid black;
+    transition: all 0.3s;
+    transition-timing-function: ease;
+
+  }
+
+.feat-link a:hover {
+    box-shadow: 2.5px 4px rgb(51, 51, 51);
+    transform: translate(-2px, -2px);
+    border-style: 1px solid black;
+    /* font-weight: 600; */
+  }
+
+.grey-link a {
+    padding: 5px 15px;
+    font-size: 1rem;
+    font-weight: 400;
+    display: flex;
+    color: #666;
+    transition: all 0.3s;
+    transition-timing-function: ease-out;
+    /*align-items: center;*/
+  }
+
+.grey-link a:hover {
+    /* font-weight: 500; */
+    box-shadow: 2.5px 4px rgb(63, 178, 139);
+    transform: translate(0, -2px);
+  }
+
+.nav-responsive {
+    background-color: white;
+    padding: 10px 15px;
+    width: 100vw;
+    min-height: 48px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.nav-logo-resp {
+    background-image: url(assets/icons/errotuz_logo_resp.svg);
+    /* background-color: #333; */
+    height: 32px;
+    width: 31px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    z-index: 2;
+}
+
+/* .nav-logo-resp a {
+    display: flex;
+} */
+
+.hamburger {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: #f1f1f1;
+    height: 21px;
+    width: 32px;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    cursor: pointer;
+}
+
+.rectangle {
+  display: flex;
+  background-color: #bbbbbb;
+  height: 4px;
+  width: 100%;
+}
+
+.dropdown-menu {
+    background-color: #f0f0f0;
+    padding: 16px;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    pointer-events: none;
+    opacity: 0;
+    transition: all 0.2s;
+    transition-timing-function: ease-out;
+}
+
+.dropdown-menu.visible {
+    background-color: #fff;
+    box-shadow: 4px 12px 20px rgba(3, 38, 43, 0.164); 
+    padding: 16px;
+    width: 100%;
+    position: absolute;
+    opacity: 1;
+    z-index: 4;
+    display: flex;
+    justify-content: center;
+    transition: all 0.2s;
+    transition-timing-function: ease-out;
+    pointer-events: unset;
+}
+
+@media screen and (min-width: 850px) {
+    .nav-responsive {
+        display: none;
+    }
+
+    .dropdown-menu.visible {
+        display: none;
+    }
+
+}
+
+.dropdown-menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown-menu li {
+    padding: 12px 0;
+    text-align: center;
+    width: 100%;
+}
+
+.dropdown-menu li:active {
+    background-color: #3fb28b;
+}
+
+.dropdown-menu li:active a {
+    color: white;
+}
+
+section {
+    padding: 32px auto;
+    display: flex;
+    justify-content: center;
+    height: auto;
+
+}
+
+section.featured {
+    background-color: #f0f0f0;
+    padding: 0 0 64px 0;
+    display: flex;
+    flex-direction: column;
+    /*min-width: 100vh;*/
+    min-height: 55vh;
+    /*width: 100%;*/
+    justify-content: center;
+}
+
+.card-container {
+    /*background-color: gray;*/
+    margin: 10px auto;
+    width: 960px;
+    max-width: 1040px;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.title-container {
+    /*background-color: gray;*/
+    margin: 64px 0;
+    padding: 0 0 0 20px;
+    /* width: 960px; */
+    width: 960px;
+    /* width: 95vw; */
+    height: auto;
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+    /* flex-wrap: nowrap; */
+    justify-content: flex-start;
+    /* align-items: center; */
+}
+
+.title-container h3 {
+    margin: 0 auto 0 0;
+    display: inline-flex;
+    color: #333;
+}
+
+.card {
+   /* margin: 20px;*/
+    background-color: honeydew;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: nowrap;
+    width: 288px;
+    height: 304px;
+    box-shadow: 5px 5px 20px rgba(75, 72, 78, 0.25);
+    overflow: hidden;
+    transform: translate(0, 0);
+    transition: 0.3s;
+    transition-timing-function: ease-out;
+}
+
+.card:hover {
+    transform: translate(0, -8px);
+
+}
+
+.card-inv {
+    background-image: url(https://images.pexels.com/photos/235615/pexels-photo-235615.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+    background-size: cover;
+}
+
+.card-edu {
+    background-image: url(https://image.freepik.com/foto-gratis/trekking-bosque_53876-30630.jpg);
+    background-size: cover;
+
+}
+
+.card-ases {
+    background-image: url(https://images.pexels.com/photos/1002703/pexels-photo-1002703.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+    background-size: cover;
+    background-position: right;
+
+}
+
+.card-summary {
+    background-color: rgba(255,255,255,1);
+    padding: 0px 10px 5px 10px;
+    /* filter: grayscale(100%);*/
+    /*fill-opacity: 50%;*/
+    mix-blend-mode: hard-light;
+    width: 100%;
+    height: auto;
+    position: relative;
+    text-overflow: ellipsis;
+    transform: translate(0,94px);
+    line-height: 24px;
+    transition: 0.3s;
+    transition-timing-function: ease;
+    display: inline-block;
+}
+
+.card-summary h4 {
+    line-height: 1em;
+    padding: 0px;
+    margin: 16px 0;
+  }
+
+
+.card:hover .card-summary {
+    transform: translate(0, 0);
+  }
+
+
+.footer {
+    background-color: #ffffff;
+    height: 64px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+p.small {
+    font-size: 0.875rem;
+
+}
+
+.cta-main {
+    /*background-color: #3fb28b;*/
+    background-image: linear-gradient(-64deg, #3ac093, #15e2c7);
+    margin: 64px auto;
+    padding: 16px 30px;
+    height: 48px;
+    width: auto;
+    border-radius: 24px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    transform: translate(0, 0);
+    transition: 0.3s;  
+}
+
+.cta-main:hover {
+    box-shadow: 5px 5px 20px rgba(7, 131, 110, 0.25);
+    transform: translate(0, -5px);
+    background-image: linear-gradient(-34deg, #3ac093, #15e2c7);
+}
+
+.cta-text {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #fff;
+    letter-spacing: 0.6px;
+}
+
+@media screen and (max-width: 970px) {
+    
+    .title-container {
+        padding: 0;
+        text-align: center;
+        width: 100%;
+        /* max-width: unset; */
+        margin: 32px auto;
+    }
+
+    .card-container {
+        /*background-color: #bbbbbb;*/
+        flex-direction: column;
+        width: 80vw;
+        justify-content: space-around;
+    }
+
+    .card {
+        margin: 16px 0;
+    }
+}
+#logo{
+
+width: 270px;
+height: 120px;
+
+}
+
+        .container--redes{
+  width:400px;
+  left:0;
+  position:fixed;
+  top:25%;
+    z-index: 9999; /* Valor alto para asegurar que esté por encima de todo */
+
+  }
+.icon{
+  top:50%;
+  position:relative;
+  margin-bottom:10px;
+  }
+
+
+.icon-primary{
+  display:inline-block;
+  text-decoration:none;
+  color:#fff;
+  background-color:#3b5998;
+  border-radius:100%;
+  position:relative;
+  z-index:1;
+  box-shadow:1px 0 1px rgba(0,0,0,.5);
+  height:40px;
+  width:40px;
+  text-align:center;
+  line-height:40px;
+  }
+
+.container-description{
+  overflow:hidden;
+  position:absolute;
+  top:0;
+  left:24px;
+
+}
+
+.icon-description{
+  width:250px;
+  display:inline-block;
+  text-decoration:none;
+  color:#fff;
+  background-color:#3b5998;
+  height:40px;
+  line-height:40px;
+  padding-left:40px;
+  border-radius:0 20px 20px 0;
+  transform: translate3d(-110%, 0, 0);
+  transition:transform 175ms ease;
+}
+
+.icon-primary:hover  ~ .container-description .icon-description{
+     transform: translate(0, 0);
+  
+}
+
+/*colores para redes sociales*/
+.color-twitter{
+  background-color:white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.color-whatsapp {
+
+  background-image: url('imagenes/whatsapp.png');
+  /* Ajusta el tamaño y otras propiedades del fondo según sea necesario */
+  background-size: cover; /* Ajusta el tamaño del fondo */
+  display: inline-block; /* Para que el elemento <a> sea un bloque de tamaño adecuado */
+  width: 40px; /* Ancho del icono, ajusta según sea necesario */
+  height: 40px; /* Alto del icono, ajusta según sea necesario */
+  text-indent: -9999px; /* Oculta el texto dentro del enlace, mostrando solo el fondo */
+  font-size: 0; /* Ajusta el tamaño de la fuente a cero para ocultar cualquier texto visible */
+}
+
+
+
+
+.color-whatsapp-text {
+    position: relative; /* Establece posición relativa para permitir superposición */
+    display: inline-block;
+    padding: 10px 15px;
+    color: #fff;
+    background-image: url('imagenes/whatsapp.png');
+    background-size: cover;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    overflow: hidden; /* Oculta cualquier desbordamiento del contenido */
+}
+
+.color-whatsapp-text span {
+    position: relative; /* Establece posición relativa para permitir superposición */
+    z-index: 1; /* Asegura que el texto esté por encima del fondo */
+}
+
+
+
+
+
+
+.color-gmail {
+
+    background-image: url('imagenes/gmail.png');
+  /* Ajusta el tamaño y otras propiedades del fondo según sea necesario */
+  background-size: cover; /* Ajusta el tamaño del fondo */
+  display: inline-block; /* Para que el elemento <a> sea un bloque de tamaño adecuado */
+  width: 40px; /* Ancho del icono, ajusta según sea necesario */
+  height: 40px; /* Alto del icono, ajusta según sea necesario */
+  text-indent: -9999px; /* Oculta el texto dentro del enlace, mostrando solo el fondo */
+  font-size: 0; /* Ajusta el tamaño de la fuente a cero para ocultar cualquier texto visible */
+}
+
+
+
+
+
+.color-gmail-text {
+    position: relative; /* Establece posición relativa para permitir superposición */
+    display: inline-block;
+    padding: 10px 15px;
+    color: #fff;
+    background-size: cover;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    overflow: hidden; /* Oculta cualquier desbordamiento del contenido */
+}
+
+.color-gmail-text span {
+    position: relative; /* Establece posición relativa para permitir superposición */
+    z-index: 1; /* Asegura que el texto esté por encima del fondo */
+}
+
+
+
+     #fotoo{
+border-radius: 18px;
+            width: 500px;
+
+
+        }
+        /* Estilos de la sección de atención */
+        .attention {
+            background: white;
+            padding: 4rem 0;
+        }
+
+        .attention .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .attention-text {
+            width: 60%;
+        }
+
+        .attention-text h2 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        .attention-text p {
+            font-size: 1.125rem;
+            color: #666;
+        }
+
+        .attention-image {
+            width: 30%;
+        }
+
+
+
+
+
+
+.virtual-consultation {
+    background-color: rgb(230, 230, 230); /* Gris claro */
+    padding: 80px 0;
+    text-align: center;
+}
+
+.virtual-consultation .container {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.virtual-consultation .text-wrapper {
+    position: relative;
+    right: 70%;
+    max-width: 100%;
+    text-align: left;
+}
+
+.virtual-consultation h2 {
+    font-size: 40px; /* Aumentado el tamaño del título */
+    margin-bottom: 15px; /* Incrementado el margen inferior */
+    color: #333;
+}
+
+.virtual-consultation p {
+    font-size: 22px;
+    line-height: 1.6;
+    color: #666;
+}
+
+.virtual-consultation .content-wrapper {
+    max-width: 75%;
+    text-align: right;
+}
+
+.virtual-consultation .image-wrapper img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.virtual-consultation .logos {
+    display: flex;
+    justify-content: flex-end; /* Alineación de los logos a la derecha */
+    align-items: center;
+    margin-top: 20px;
+}
+
+.virtual-consultation .logos img {
+    width: 120px;
+    height: auto;
+    margin-left: 20px;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.virtual-consultation .logos img:first-child {
+    margin-left: 0;
+}
+
+.virtual-consultation .logos img:hover {
+    opacity: 1;
+}
+
+
+</style>
+<nav class="nav-responsive">
+    <a href="index.html">
+        <div class="nav-logo-resp">
+        </div>
+    </a> 
+    <div class="hamburger">
+        <div class="rectangle">
+        </div>
+        <div class="rectangle">
+        </div>
+        <div class="rectangle">
+        </div>
+    </div>      
+</nav>
+    
+<nav class="nav-desktop">
+    <a href="index.html">
+    <div class="logo-box">
+    <img class="nav-logo" id="logo" src="imagenes/LOGO JENIFER PRUEBA .png" alt="Logo">
+</div>
+
+    </a>
+                
+    <ul>
+        <li class="feat-link"><a href="investigacion.html"> INICIO</a></li>
+        <li class="feat-link"><a href="asesoria.html">SERVICIOS</a></li>
+        <li class="feat-link"><a href="educacion-ambiental.html">CONOZCANOS</a></li>
+        <div class="nav-separator"></div>
+        <li class="grey-link"><a href="vision-errotuz.html">CONTACTENOS</a></li>
+    </ul>
+</nav>
+
+<nav class="dropdown-menu">
+    <ul>
+        <li class="feat-link-resp">
+            <a href="investigacion.html">
+                INICIO
+            </a>
+        </li>
+        <li class="feat-link-resp">
+            <a href="asesoria.html">
+                SERVICIOS
+            </a>
+        </li>
+        <li class="feat-link-resp">
+            <a href="educacion-ambiental.html">
+                CONOZCANOS
+            </a>
+        </li>
+        <li class="grey-link-resp">
+            <a href="vision-errotuz">
+               CONTACTENOS
+            </a>
+        </li>
+        
+    </ul>
+</nav>
+
+<header>
+    <h4>Asesorías contables y tributarias revisoría fiscal AF</h4>
+    <div class="header-filter">
+    </div>
+</header>
+
+
+ <section id="atencion" class="attention">
+        <div class="container">
+            <div class="attention-text">
+                <h2>ANDREA FRANCO</h2>
+<h4>Contadora Pública</h4>
+<ul>
+    <li>Asesoría contable y tributaria</li>
+    <li>Revisión fiscal</li>
+    <li>Revisión fiscal</li>
+    <li>Revisión fiscal</li>
+<p>andreafrancocontadora@gmail.com</p>
+
+</ul>
+
+                
+
+            </div>
+            <div class="attention-image">
+                <img id="fotoo" src="imagenes/chico-guapo-seguro-posando-contra-pared-blanca_176420-32936.avif" alt="Descripción de la imagen">
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="featured">
+    <div class="title-container">
+         <h4>Proyectos recientes</h4>
+    </div>
+     
+    <div class="card-container">
+        <a href="investigacion.html">
+            <div class="card card-inv">
+                <div class="card-summary">
+                    <h4>Investigación</h4>
+                  <p>Estudio de potencial reproductivo en <i>Taxus baccata</i> hembras, creciendo bajo distintas condiciones de luminosidad.</p>
+                </div>
+            </div>
+        </a> 
+
+        <a href="educacion-ambiental.html">
+            <div class="card card-edu">
+                <div class="card-summary">
+                    <h4>Educación</h4>
+                    <p>Proyecto de Ciencia Ciudadana sobre diversidad de líquenes en bosques urbanos <i>Likenika</i>.</p>
+                </div>
+            </div>
+        </a>
+
+        <a href="asesoria-tecnica">
+            <div class="card card-ases">
+                <div class="card-summary">
+                    <h4>Asesoría</h4>
+                    <p>Plan Técnico de Gestión Forestal Sostenible de los montes del Ayuntamiento de Erandio.</p>
+                </div>
+            </div>
+        </a>
+    </div>    
+</section>
+
+
+
+
+<section class="virtual-consultation">
+    <div class="container">
+        <div class="text-wrapper">
+            <h2>Recibe la mejor asesoría virtual</h2>
+            <p>Conéctate con nosotros para obtener la mejor asesoría virtual y resolver tus consultas de manera efectiva.</p>
+        </div>
+        <div class="content-wrapper">
+            <div class="image-wrapper">
+                <img src="imagenes/teams-to-tv-removebg-preview.png" alt="Computador">
+            </div>
+            <div class="logos">
+                <img src="imagenes/11-como-funciona-microsoft-teams.png" alt="Microsoft Teams">
+                <img src="imagenes/zoom-thumb.jpg" alt="Zoom">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<article class="container--redes">
+  <!--incio de el primer icono-->
+    <div class="icon">
+      <a class="icon-primary" href="#">f</a>	
+
+      <div class="container-description">
+        <a class="icon-description" href="#">OBTENER INFORMACION</a>	
+      </div>
+    </div>
+
+  <!--incio segundo icono-->
+<div class="icon">
+    <a class="icon-primary color-gmail" href="mailto:Normas.gestion@gmail.com?subject=Necesito%20m%C3%A1s%20informaci%C3%B3n">
+        W
+    </a>	
+    <div class="container-description">
+        <a class="icon-description color-gmail-text" href="mailto:Normas.gestion@gmail.com?subject=Necesito%20m%C3%A1s%20informaci%C3%B3n">
+            OBTENER INFORMACIÓN
+        </a>	
+    </div>
+</div>
+
+
+<div class="icon">
+    <a class="icon-primary color-whatsapp" href="https://wa.me/573165362193?text=Necesito%20m%C3%A1s%20informaci%C3%B3n" target="_blank">
+        W
+    </a>	
+    <div class="container-description">
+        <a class="icon-description color-whatsapp-text" href="https://wa.me/573165362193?text=Necesito%20m%C3%A1s%20informaci%C3%B3n" target="_blank">
+            OBTENER INFORMACIÓN
+        </a>	
+    </div>
+</div>
+
+
+</article>
+
+
+
+
+
+
+
+<section>
+    <a href="https://plus.google.com/115044885163604610880"> 
+        <div class="button cta-main">
+            <span class="cta-text">Blog Errotuz</span>
+        </div>
+    </a>    
+</section> 
+
+
+<div class="footer">
+   <p class="small">© Errotuz 2018</p>  
+</div>     
+
+</body>
+<script src="errotuz.js">   
+</script>
+<Script>
+    const hamburgerMenu = document.querySelector('.hamburger');
+const dropdownMenu = document.querySelector('.dropdown-menu');
+
+hamburgerMenu.addEventListener('mousedown', function(){
+    dropdownMenu.classList.toggle('visible');
+})
+</Script>
